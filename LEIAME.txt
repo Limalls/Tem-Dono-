@@ -1,0 +1,6 @@
+Projeto completo (Vite + React). Para rodar:
+
+1) Abra a pasta no VS Code
+2) Copie .env.example para .env e coloque sua chave: VITE_API_KEY=sua-chave
+3) No terminal: npm install
+4) npm run dev

@@ -20,6 +20,9 @@ export default function Layout() {
 
   return (
     <>
+      <div className="fundo" aria-hidden="true">
+        <span /><span /><span /><span />
+      </div>
       <header className="topo">
         <Link to="/" className="marca">
           <span className="furo" aria-hidden="true" />

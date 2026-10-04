@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import "./navbar.css"
 
 const icones = {
@@ -21,13 +21,13 @@ export default function Navbar() {
   return (
     <nav className="barra" style={{ "--n": links.length, "--i": ativo }} aria-label="Navegação principal">
       <span className="pino" aria-hidden="true" />
-      {links.map((l) => (
-        <NavLink key={l.para} to={l.para} end={l.para === "/"} className="aba">
+      {links.map((l, i) => (
+        <Link key={l.para} to={l.para} className={`aba${i === ativo ? " active" : ""}`}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             {icones[l.icone]}
           </svg>
           {l.nome}
-        </NavLink>
+        </Link>
       ))}
     </nav>
   )

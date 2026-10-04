@@ -2,14 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import api from "../services/api.js"
 import ItemCard from "../components/ItemCard.jsx"
-
-function mensagemDeErro(erro) {
-  const status = erro.response?.status
-  if (status === 401) return "Não foi possível carregar. Verifique sua chave no arquivo .env."
-  if (status === 422) return erro.response.data?.detail?.[0]?.msg ?? "Dados inválidos."
-  if (!erro.response) return "Sem conexão com a API. Verifique sua internet."
-  return "Não foi possível carregar os itens. Tente novamente."
-}
+import { mensagemDeErro } from "../utils/erros.js"
 
 export default function Home() {
   const [itens, setItens] = useState([])

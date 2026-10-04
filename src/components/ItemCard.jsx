@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom"
-
-function formatarData(iso) {
-  if (!iso) return ""
-  const [ano, mes, dia] = iso.split("-")
-  return `${dia}/${mes}/${ano}`
-}
+import { formatarData } from "../utils/formatarData.js"
 
 export default function ItemCard({ item }) {
   return (

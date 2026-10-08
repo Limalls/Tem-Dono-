@@ -7,8 +7,8 @@
   height: 64px;
   display: flex;
   background: var(--topo);
-  border-radius: 32px;
-  box-shadow: 0 10px 24px rgba(20, 20, 15, 0.35);
+  border-radius: 18px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.28);
   z-index: 10;
 }
 
@@ -23,15 +23,15 @@
 .pino::before {
   content: "";
   position: absolute;
-  top: -22px;
+  top: -27px;
   left: 50%;
   width: 58px;
   height: 58px;
   margin-left: -29px;
   border-radius: 50%;
   background: var(--alerta);
-  border: 6px solid var(--topo);
-  box-sizing: border-box;
+  border: 6px solid var(--topo); /* anel na cor da barra: parece que a barra "sobe" */
+  box-sizing: border-box; /* pseudo-elementos não herdam o * { } */
 }
 
 .aba {

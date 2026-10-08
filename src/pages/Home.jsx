@@ -15,6 +15,7 @@ export default function Home() {
   const [carregando, setCarregando] = useState(true)
   const [erro, setErro] = useState("")
 
+  // listas dos selects (carrega uma vez)
   useEffect(() => {
     async function carregarOpcoes() {
       try {
@@ -25,11 +26,13 @@ export default function Home() {
         setCategorias(cat.data)
         setLocais(loc.data)
       } catch (e) {
+        // os selects ficam vazios; o erro principal aparece na lista
       }
     }
     carregarOpcoes()
   }, [])
 
+  // itens: recarrega quando a busca ou um filtro muda
   useEffect(() => {
     let atual = true
     const espera = setTimeout(async () => {
@@ -48,7 +51,7 @@ export default function Home() {
       } finally {
         if (atual) setCarregando(false)
       }
-    }, 300) 
+    }, 300) // espera parar de digitar
 
     return () => {
       atual = false
@@ -59,7 +62,12 @@ export default function Home() {
   return (
     <>
       <div className="titulo-linha">
-        <h1>Itens encontrados</h1>
+        <div>
+          <h1>Itens encontrados</h1>
+          {!carregando && !erro && (
+            <p className="contagem">{itens.length} {itens.length === 1 ? "registro" : "registros"}</p>
+          )}
+        </div>
         <Link to="/novo" className="botao">+ Novo item</Link>
       </div>
 

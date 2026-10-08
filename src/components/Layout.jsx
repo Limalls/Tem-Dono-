@@ -20,17 +20,11 @@ export default function Layout() {
 
   return (
     <>
-      <div className="fundo" aria-hidden="true">
-        <span /><span /><span /><span />
-      </div>
       <header className="topo">
         <Link to="/" className="marca">
-          <span className="furo" aria-hidden="true" />
-          Tem dono?
+          Tem dono?<small>Achados e perdidos · IFRN</small>
         </Link>
-        <p className="saudacao">
-          {dono ? `Olá, ${dono.nome}` : "Olá"}
-        </p>
+        <p className="saudacao">{dono ? `Olá, ${dono.nome}` : "Olá"}</p>
       </header>
       <main className="conteudo">
         <Outlet />

@@ -12,6 +12,7 @@
   z-index: 10;
 }
 
+/* círculo que desliza até a aba ativa */
 .pino {
   position: absolute;
   inset: 0 auto 0 0;
@@ -23,15 +24,15 @@
 .pino::before {
   content: "";
   position: absolute;
-  top: -27px;
+  top: -22px;
   left: 50%;
   width: 58px;
   height: 58px;
   margin-left: -29px;
   border-radius: 50%;
   background: var(--alerta);
-  border: 6px solid var(--topo); 
-  box-sizing: border-box;
+  border: 6px solid var(--topo);
+  box-sizing: border-box; 
 }
 
 .aba {
@@ -48,7 +49,7 @@
   text-decoration: none;
 }
 .aba svg { width: 22px; height: 22px; transition: transform 0.4s cubic-bezier(0.3, 1.35, 0.5, 1); }
-.aba.active { color: #fff; font-weight: 600; border-bottom: none; }
+.aba.active { color: #fff; font-weight: 600; }
 .aba.active svg { transform: translateY(-24px); color: #14140f; }
 
 @media (prefers-reduced-motion: reduce) {

@@ -26,7 +26,7 @@ export default function Layout() {
     try { localStorage.setItem("estilo", alegre ? "alegre" : "padrao") } catch (e) {}
   }, [alegre])
 
-    function trocarEstilo() {
+  function trocarEstilo() {
     const html = document.documentElement
     html.classList.add("trocando")
     setAlegre(!alegre)

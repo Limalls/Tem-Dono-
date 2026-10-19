@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
 
+/* Estilo alegre: ativado pelo botão do topo (html[data-estilo="alegre"]) */
 :root[data-estilo="alegre"] {
   --tinta: #171e15; --fundo: #eef8ec; --papel: #ffffff; --linha: #bae4b4; --traco: #bae4b4;
   --sombra: rgba(66, 151, 53, 0.16); --alerta: #75ca68; --aguardando: #5a3d00; --devolvido: #214b1b;
@@ -9,6 +10,7 @@
 :root[data-estilo="alegre"] body { font-family: "Nunito", system-ui, sans-serif; }
 :root[data-estilo="alegre"] h1 { font-weight: 800; letter-spacing: -0.01em; }
 
+/* rótulos que eram em caixa alta/mono ficam normais */
 :root[data-estilo="alegre"] :is(.meta, .contagem, .campos dt, .form label, .voltar, .estilo-btn, .stats span, .marca small) {
   text-transform: none; letter-spacing: 0;
 }

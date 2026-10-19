@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+
+:root[data-estilo="alegre"] {
+  --tinta: #171e15; --fundo: #eef8ec; --papel: #ffffff; --linha: #bae4b4; --traco: #bae4b4;
+  --sombra: rgba(66, 151, 53, 0.16); --alerta: #75ca68; --aguardando: #5a3d00; --devolvido: #214b1b;
+  --btntxt: #171e15; --erro: #c0392b; --foco: #214b1b;
+  --mono: "Nunito", system-ui, sans-serif;
+}
+:root[data-estilo="alegre"] body { font-family: "Nunito", system-ui, sans-serif; }
+:root[data-estilo="alegre"] h1 { font-weight: 800; letter-spacing: -0.01em; }
+
+:root[data-estilo="alegre"] :is(.meta, .contagem, .campos dt, .form label, .voltar, .estilo-btn, .stats span, .marca small) {
+  text-transform: none; letter-spacing: 0;
+}
+
+/* topo */
+:root[data-estilo="alegre"] .topo { background: #75ca68; color: #11260d; border-bottom: 0; }
+:root[data-estilo="alegre"] .marca { color: #11260d; font-weight: 800; }
+:root[data-estilo="alegre"] .estilo-btn { background: #171e15; color: #ddf2d9; border: 0; border-radius: 999px; padding: 0.35rem 0.9rem; }
+:root[data-estilo="alegre"] .estilo-btn:hover { background: #214b1b; color: #fff; }
+
+/* botões e campos */
+:root[data-estilo="alegre"] .botao { background: #171e15; color: #ddf2d9; border: 0; border-radius: 999px; box-shadow: none; padding: 0.6rem 1.2rem; }
+:root[data-estilo="alegre"] .botao:hover { transform: none; box-shadow: none; filter: brightness(1.25); }
+:root[data-estilo="alegre"] .botao:active { transform: scale(0.97); box-shadow: none; }
+:root[data-estilo="alegre"] .botao.sec { background: #fff; color: #171e15; border: 2px solid #bae4b4; }
+:root[data-estilo="alegre"] .botao.perigo { background: var(--erro); color: #fff; }
+:root[data-estilo="alegre"] :is(input, select) { border: 2px solid #bae4b4; border-radius: 999px; padding-inline: 1.1rem; }
+:root[data-estilo="alegre"] textarea { border: 2px solid #bae4b4; border-radius: 18px; padding-inline: 1.1rem; }
+
+/* cards */
+:root[data-estilo="alegre"] .etiqueta { border: 0; border-radius: 22px; box-shadow: 0 8px 20px rgba(66, 151, 53, 0.13); }
+:root[data-estilo="alegre"] .etiqueta:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(66, 151, 53, 0.2); }
+:root[data-estilo="alegre"] .num {
+  opacity: 1; color: #214b1b; background: #ddf2d9; border-radius: 50%;
+  min-width: 2.6rem; height: 2.6rem; display: grid; place-items: center; font-weight: 700;
+}
+:root[data-estilo="alegre"] .selo { transform: none; border: 0; border-radius: 999px; padding: 0.25rem 0.85rem; font-weight: 700; text-transform: none; letter-spacing: 0; }
+:root[data-estilo="alegre"] .selo.aguardando { background: #ffe08a; color: #5a3d00; }
+:root[data-estilo="alegre"] .selo.devolvido { background: #bae4b4; color: #214b1b; }
+
+/* detalhe, formulário, perfil */
+:root[data-estilo="alegre"] :is(.detalhe, .form) { border: 0; border-radius: 26px; box-shadow: 0 10px 28px rgba(66, 151, 53, 0.15); }
+:root[data-estilo="alegre"] .stats div { border: 0; border-radius: 22px; box-shadow: 0 8px 20px rgba(66, 151, 53, 0.13); }
+:root[data-estilo="alegre"] .stats strong { font-weight: 800; }
+:root[data-estilo="alegre"] .confirmacao { border-radius: 16px; }
+:root[data-estilo="alegre"] .devolucao { border-top-color: #bae4b4; }
+
+/* navbar em pílula */
+:root[data-estilo="alegre"] .barra { border-radius: 999px; box-shadow: 0 10px 24px rgba(23, 30, 21, 0.25); background: #171e15; }
+:root[data-estilo="alegre"] .pino::before { border-color: #171e15; }
+
+/* lista suspensa */
+:root[data-estilo="alegre"] ::picker(select) { border: 2px solid #bae4b4; border-radius: 18px; box-shadow: 0 10px 24px rgba(66, 151, 53, 0.2); overflow: hidden; }
+:root[data-estilo="alegre"] option:hover, :root[data-estilo="alegre"] option:focus-visible { background: #ddf2d9; color: #171e15; }

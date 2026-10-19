@@ -3,12 +3,19 @@ import "./navbar.css"
 
 const icones = {
   casa: <path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10" />,
-  mais: <path d="M12 5v14M5 12h14" />
+  mais: <path d="M12 5v14M5 12h14" />,
+  perfil: (
+    <>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21a8 8 0 0 1 16 0" />
+    </>
+  )
 }
 
 const links = [
   { para: "/", nome: "Início", icone: "casa" },
-  { para: "/novo", nome: "Novo item", icone: "mais" }
+  { para: "/novo", nome: "Novo item", icone: "mais" },
+  { para: "/perfil", nome: "Perfil", icone: "perfil" }
 ]
 
 export default function Navbar() {

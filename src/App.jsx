@@ -3,6 +3,7 @@ import Layout from "./components/Layout.jsx"
 import Home from "./pages/Home.jsx"
 import Detalhe from "./pages/Detalhe.jsx"
 import Formulario from "./pages/Formulario.jsx"
+import Perfil from "./pages/Perfil.jsx"
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/item/:id" element={<Detalhe />} />
+        <Route path="/perfil" element={<Perfil />} />
         <Route path="/novo" element={<Formulario />} />
         <Route path="/editar/:id" element={<Formulario />} />
       </Route>
